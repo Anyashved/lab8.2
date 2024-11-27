@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сложный пример CSS Grid</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    /* Контейнер сетки */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      grid-gap: 16px;
+      width: 90%;
+      max-width: 1200px;
+    }
+
+    /* Цветные элементы сетки с именованными областями */
+    .item1 { grid-area: 1 / 1 / 2 / 4; background-color: #6BCB77; }
+    .item2 { grid-area: 2 / 1 / 4 / 2; background-color: #FFD93D; }
+    .item3 { grid-area: 2 / 2 / 4 / 3; background-color: #4D96FF; }
+    .item4 { grid-area: 4 / 1 / 5 / 4; background-color: #FF9F1C; }
+    .item5 { grid-area: 2 / 3 / 3 / 4; background-color: #FFB6B9; }
+    .item6 { grid-area: 3 / 3 / 4 / 4; background-color: #A1E8AF; }
+    .item7 { grid-area: 5 / 2 / 6 / 3; background-color: #FFE156; }
+    .item8 { grid-area: 5 / 3 / 6 / 4; background-color: #FF6B6B; }
+
+    /* Оформление элементов сетки */
+    .grid-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5em;
+      font-weight: bold;
+      border-radius: 8px;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="grid-item item1">Заголовок</div>
+    <div class="grid-item item2">Боковая панель</div>
+    <div class="grid-item item3">Контент</div>
+    <div class="grid-item item4">Во всю ширину</div>
+    <div class="grid-item item5">Большой блок</div>
+    <div class="grid-item item6">Широкий блок</div>
+    <div class="grid-item item7">Футер</div>
+    <div class="grid-item item8">Нижний блок</div>
+  </div>
+</body>
+</html>
